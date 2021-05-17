@@ -20,8 +20,6 @@ env:
     
 install:
   #-  git clone --quiet --depth 1 https://github.com/ros-industrial/industrial_ci.git .industrial_ci -b master
-  - apk add --update bash coreutils tar grep curl           # Install industrial_ci dependencies
-  - apk add --update python3 py3-pip python3-dev            # Extra tools needed for coveralls.io
   - git clone --quiet --depth 1 https://github.com/Briancbn/industrial_ci/ .industrial_ci -b pr-coverage-rebased
   
 script:
