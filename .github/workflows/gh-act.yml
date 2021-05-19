@@ -1,4 +1,4 @@
-name: GH Actions CI
+name: GH-Actions-CI
 
 # This determines when this workflow is run
 on: [push, pull_request] # on all pushes and PRs
@@ -13,7 +13,7 @@ jobs:
     env:
       CCACHE_DIR: /github/home/.ccache # Directory for ccache (and how we enable ccache in industrial_ci)
       CODE_COVERAGE: codecov.io
-      	
+
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
