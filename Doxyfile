@@ -1,0 +1,53 @@
+# Doxyfile 1.9.2
+
+DOXYFILE_ENCODING      = UTF-8
+PROJECT_NAME           = "packml_ros2"
+PROJECT_NUMBER         = 0.1.0
+PROJECT_BRIEF          = "Implementation of a state machine as prescribed in the Packaging Machine Language (PackML) standard in simulation."
+
+# Recommended Max Height: 55, max width: 200px 
+PROJECT_LOGO           =
+
+# The OUTPUT_DIRECTORY tag is used to specify the (relative or absolute) path
+# into which the generated documentation will be written. If a relative path is
+# entered, it will be relative to the location where doxygen was started. If
+# left blank the current directory will be used.
+
+OUTPUT_DIRECTORY       = "doc"
+CREATE_SUBDIRS         = NO
+ALLOW_UNICODE_NAMES    = NO
+OUTPUT_LANGUAGE        = English
+
+FULL_PATH_NAMES        = YES
+
+MARKDOWN_SUPPORT       = YES
+NUM_PROC_THREADS       = 2
+
+DISABLE_INDEX 		= NO 		# Top bar
+GENERATE_TREEVIEW      = NO # optional. Also works without treeview
+
+# Theme
+#HTML_HEADER            = "assets/doxygen-rusted/header.html"
+#HTML_FOOTER            = "assets/doxygen-rusted/footer.html"
+#HTML_STYLESHEET 
+#HTML_EXTRA_STYLESHEET  = "assets/doxygen-rusted/style.css"
+
+HTML_EXTRA_STYLESHEET = "assets/flat-design/style.css"
+
+
+#---------------------------------------------------------------------------
+# Build related configuration options
+#---------------------------------------------------------------------------
+
+# If the EXTRACT_ALL tag is set to YES, doxygen will assume all entities in
+# documentation are documented, even if no documentation was available. Private
+# class members and static file members will be hidden unless the
+# EXTRACT_PRIVATE respectively EXTRACT_STATIC tags are set to YES.
+# Note: This will also disable the warnings about undocumented members that are
+# normally produced when WARNINGS is set to YES.
+# The default value is: NO.
+
+EXTRACT_ALL            = NO
+
+RECURSIVE              = YES
+USE_MDFILE_AS_MAINPAGE = DOCUMENTATION.md
