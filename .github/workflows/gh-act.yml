@@ -12,7 +12,8 @@ jobs:
            - {ROS_DISTRO: foxy, ROS_REPO: main}
     env:
       CCACHE_DIR: /github/home/.ccache # Directory for ccache (and how we enable ccache in industrial_ci)
-      CODE_COVERAGE: codecov.io
+      CODE_COVERAGE: coveralls.io #codecov.io
+      COVERALLS_REPO_TOKEN:  ${{ secrets.COVERALLS_TOKEN }}    #Needed for coveralls
 
     runs-on: ubuntu-latest
     steps:
@@ -26,8 +27,9 @@ jobs:
       #- uses: 'ros-industrial/industrial_ci@master'
       - uses: 'Briancbn/industrial_ci@pr-coverage-rebased'                    
         env: ${{ matrix.env }}
+        
       # Upload report
-      - name: Codecov report upload
-        uses: codecov/codecov-action@v1.5.0
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+      #- name: Codecov report upload
+      #  uses: codecov/codecov-action@v1.5.0
+      #  with:
+      #    token: ${{ secrets.CODECOV_TOKEN }}
